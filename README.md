@@ -36,6 +36,7 @@ Here is a breakdown of the entities and their corresponding attributes represent
      - **`first`**: The first name of the employee.
      - **`mid`**: The middle name of the employee.
      - **`last`**: The last name of the employee.
+   - **`position`**: The position that the employee holds within the company, e.g., "Manager", "Sales".
    - **`start_date`**:  The date when this employee started working at the company.
    - **`salary`**:  The salary of the employee.
    - **`email`**:  The email address of the employee.
@@ -73,6 +74,7 @@ Here is a breakdown of the entities and their corresponding attributes represent
 5. **SALES_INVOICES**: Represents a sale transaction between employees and customers, containing details such as which products were sold,
     - **`id`**: A unique identifier for the order.
     - **`date`**:The date when the order was placed.
+<br>
 
 6. **SUPPLIERS**: Represents suppliers who provide accessories for the retail store.
     - **`id`**: A unique identifier for each supplier.
@@ -80,10 +82,13 @@ Here is a breakdown of the entities and their corresponding attributes represent
     - **`email`**:  The email address of the supplier.
     - **`phone_number`**:  The phone number of the supplier.
     - **`addrees`**: The address of the supplier.
+<br>
 
 7. **IMPORT_INVOICES**: Represents import invoices which contain information about imported items.
     - **`id`**: A unique identifier for each invoice.
     - **`date`**: The date when the invoice was issued.
+
+> **Note**: The attributes which are <u>underlined</u> are primary keys.
 
 ### Relationships
 
@@ -91,5 +96,17 @@ In addition to the attributes of each individual entity, relationships between e
 
 - **EMPLOYEES** and **SALES_INVOICES**: The relationship between employees and sales invoices is one-to-many, indicating that each employee can be associated with multiple sales invoices, while each sales invoice is tied to a single employee.
 - **CUSTOMERS** and **SALES_INVOICES**: The relationship between customers and sales invoices is one-to-many, signifying that each customer can have multiple sales invoices, while each sales invoice is linked to a single customer.
-- **ACCESSORIES** and **SALES_INVOICES**: The relationship between accessories and sales invoices is many-to-many, demonstrating that each sales invoice can contain multiple accessories, and each accessory can be present in multiple sales invoices.
-- **ACCESSORIES** and **ACCESSORY_GROUPS**: 
+- **ACCESSORIES** and **SALES_INVOICES**: The relationship between accessories and sales invoices is many-to-many, meaning that each sales invoice can contain multiple accessories, and each accessory can appear in multiple sales invoices. This relationship gives rise to an additional entity called **`quantity`**, which represents the quantity of each accessory sold in a particular sales invoice.
+- **ACCESSORIES** and **ACCESSORY_GROUPS**: The relationship between accessories and accessory groups is many-to-one, indicating that multiple accessories can belong to a single accessory group, while each accessory group can encompass multiple accessories.
+- **ACCESSORIES** and **IMPORT_INVOICES**: The relationship between accessories and import invoices is many-to-many, signifying that each import invoice can contain multiple accessories, and each accessory can be present in multiple import invoices. This relationship gives rise to an additional entity called **`quantity`**, which represents the quantity of each accessory imported in a particular import invoice.
+- **IMPORT_INVOICES** and **SUPPLIERS**: The relationship between accessories and suppliers is many-to-one, indicating that multiple accessories can be supplied by a single supplier, while each accessory is sourced from only one supplier.
+
+> **Note**: The attributes depicted in inconsistent-lined ovals within the ERD are not explicitly described, as they are derived attributes that can be calculated or inferred from other attributes within the entity or relationship. These attributes are not physically stored in the database but rather computed based on existing attribute values.
+
+<br>
+
+## Relational Model
+
+After designing the ERD, I meticulously mapped the entities and their attributes into its relational model. The relational model diagram below provides a concise overview of the database structure, illustrating the relationships between tables through references, particularly via foreign keys. 
+
+![Relational Model](figures/relational_model.png)
