@@ -22,3 +22,31 @@ Additionally, to create customer loyalty programs and manage customer relations,
 
 ## Entity Relationship Diagram (ERD)
 
+After analyzing the requirements, an ERD was designed to visually represent the database structure, facilitating efficient management of the electronic accessory store's business data.
+
+![ERD](figures/ERD.png)
+
+Here is a breakdown of the entities and their corresponding attributes represented in the ERD:
+
+1. **EMPLOYEES**:  This entity represents all employees working at the retail store.
+   - **`id`**: A unique identifier for each employee.
+   - **`name`**:  The name of the employee. It can be broken down to 3 components:
+     - **`first`**: The first name of the employee.
+     - **`mid`**: The middle name of the employee.
+     - **`last`**: The last name of the employee.
+   - **`start_date`**:  The date when this employee started working at the company.
+   - **`salary`**:  The salary of the employee.
+   - **`email`**:  The email address of the employee.
+   - **`phone`**: The phone number of the employee.
+   - **`birth_date`**: The birth date of the employee.
+<br>
+
+2. **CUSTOMERS**:  This entity represents all customers who buy electronic accessories from the retail store.
+   - **`id`**: A unique identifier for each customer.
+   - **`name`**: Similar to `name` attribute in EMPLOYEES. It can also be broken down to 3 components:
+     - **`first`**
+     - **`mid`**
+     - **`last`**
+   - **`gender`**:  Indicates whether the customer is male or female.
+   - address:
+   - birthdate
