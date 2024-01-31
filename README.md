@@ -230,13 +230,20 @@ After mapping the entity relationship model to the relational model, I structure
 
 ## SQL Time!
 
-### Create Tables
+### 1. Create Tables
 
-Before embarking on any data operations, the foundational step involves creating a robust database structure, starting with the creation of tables. The **`create_tables.sql`** file provided [here]() lays out the essential SQL commands required to define and establish the necessary tables within the database schema.
+Before embarking on any data operations, the foundational step involves creating a robust database structure, starting with the creation of tables. The **`create_tables.sql`** file provided [here](SQL/create_tables.sql) lays out the essential SQL commands required to define and establish the necessary tables within the database schema.
 
-### Data Input
+### 2. Add Foreign Key Constraints
+
+Although the **`create_tables.sql`** file sets up the basic database structure, additional steps are necessary to ensure data integrity and relational consistency. Execute the **`add_foreign_keys.sql`** file [here](SQL/add_foreign_keys.sql) after creating the tables to enforce foreign key constraints and enhance the database's robustness.
+
+### 3. Data Input
 
 The data input for the project is stored as CSV files in [this directory](data). However, because of the requirements of the project, I have to write SQL statements to input the data table by table, line by line. The `insert_data.sql` file is [here](SQL/insert_data.sql). 
 
 <p style="color:red; font-weight: 700;">The data input is fake and it is in Vietnamese.</p>
+
+### 4. Queries
+
 
