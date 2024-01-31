@@ -47,6 +47,39 @@ Here is a breakdown of the entities and their corresponding attributes represent
      - **`first`**
      - **`mid`**
      - **`last`**
-   - **`gender`**:  Indicates whether the customer is male or female.
-   - address:
-   - birthdate
+   - **`gender`**: Indicates whether the customer is male or female.
+   - **`address`**: The full mailing address of the customer.
+   - **`phone_number`**: The primary contact phone number for the customer.
+   - **`birthdate`**: The birthday of the customer.
+<br>
+
+3. **ACCESSORIES**:  This entity represents all  electronic accessories that are sold by the retail store.
+   - **`id`**: A unique identifier for each type of accessory.
+   - **`name`**: The name of the accessory.
+   - **`made_in`**: The country where the accessory was made.
+   - **`unit`**: The unit price of one accessory item.
+   - **`original_price`**: The original price of the accessory.
+   - **`selling_price`**: The selling price of the accessory.
+<br>
+
+4. **ACCESSORY_GROUP**: This entity groups multiple accessories together so they can be managed easily.
+    - **`id`**: A unique identifier for each group.
+    - **`name`**: The name of the group.
+    - **`description`**: Description about what the group contains.
+<br>
+
+5. **SALE_INVOICES**: Represents a sale transaction between employees and customers, containing details such as which products were sold,
+    - **`id`**: A unique identifier for the order.
+    - **`date`**:The date when the order was placed.
+
+6. **SUPPLIERS**: Represents suppliers who provide accessories for the retail store.
+    - **`id`**: A unique identifier for each supplier.
+    - **`name`**: The name of the supplier.
+    - **`email`**:  The email address of the supplier.
+    - **`phone_number`**:  The phone number of the supplier.
+    - **`addrees`**: The address of the supplier.
+
+7. **IMPORT_INVOICES**: Represents import invoices which contain information about imported items.
+    - **`id`**: A unique identifier for each invoice.
+    - **`date`**: The date when the invoice was issued.
+
