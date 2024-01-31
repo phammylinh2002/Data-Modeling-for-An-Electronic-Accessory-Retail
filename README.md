@@ -113,3 +113,121 @@ After designing the ERD, I meticulously mapped the entities and their attributes
 ![Relational Model](figures/relational_diagram.png)
 <p align="center"><i>Relational Model Diagram - Source: Linh Pham My</i></p>
 
+The relational model diagram comprises nine tables representing various entities within the database schema. These entities include:
+
+1. SUPPLIERS
+2. IMPORT_INVOICES
+3. ACCESSORIES_IN_AN_IMPORT_INVOICE
+4. ACCESSORIES
+5. SALES_INVOICES
+6. ACCESSORIES_IN_A_SALES_INVOICE
+7. EMPLOYEES
+8. CUSTOMERS
+9. ACCESSORY_GROUPS
+
+Except for the tables **ACCESSORIES_IN_AN_IMPORT_INVOICE** and **ACCESSORIES_IN_A_SALES_INVOICE**, which are derived to capture the many-to-many relationships between **ACCESSORIES** and **IMPORT_INVOICES**, as well as **ACCESSORIES** and **SALES_INVOICES**, respectively, the other tables correspond to the seven entity types identified in the Entity-Relationship model.
+
+The relational model diagram incorporates derived attributes from the relationships of the 7 entities, enriching the representation of the database structure and deepening understanding. For deeper insights into the mapping process from the Entity-Relationship model to the Relational model, [Mapping from ER Model to Relational Model](geeksforgeeks.org/mapping-from-er-model-to-relational-model/) offers valuable guidance and serves as a reference, elucidating underlying principles and methodologies.
+
+<br>
+
+## Table Structures
+
+After mapping the entity relationship model to the relational model, I structured the database tables to accurately reflect the entities and their relationships. This process clarifies the database structure and the data types utilized within it, enhancing understanding of the database structure and its underlying relationships.
+
+### 1. SUPPLIERS
+
+| No. | Column Name  | Data Type     | Other Constraints     |
+| --- | ------------ | ------------- | --------------------- |
+| 1   | id           | CHAR(9)       | NOT NULL; Primary Key |
+| 2   | name         | NVARCHAR(40)  | NOT NULL              |
+| 3   | email        | NVARCHAR(50)  |                       |
+| 4   | address      | NVARCHAR(100) |                       |
+| 5   | phone_number | CHAR(10)      |                       |
+
+### 2. IMPORT_INVOICES
+
+| No. | Column Name | Data Type | Other Constraints                               |
+| --- | ----------- | --------- | ----------------------------------------------- |
+| 1   | id          | CHAR(5)   | NOT NULL; Primary Key                           |
+| 2   | date        | DATE      | NOT NULL                                        |
+| 3   | supplier_id | CHAR(9)   | NOT NULL; Foreign Key referencing **`SUPPLIERS(id)`** |
+
+### 3. ACCESSORIES_IN_AN_IMPORT_INVOICE
+
+| No. | Column Name       | Data Type | Other Constraints                                                  |
+| --- | ----------------- | --------- | ------------------------------------------------------------------ |
+| 1   | import_invoice_id | CHAR(5)   | NOT NULL; Primary Key; Foreign Key referencing **`IMPORT_INVOICES(id)`** |
+| 2   | accessory_id      | CHAR(5)   | NOT NULL; Primary Key; Foreign Key referencing **`ACCESSORIES(id)`**     |
+| 3   | quantity          | INT       | NOT NULL; Only accepts non-negative values (>= 0)                  |
+
+### 4. ACCESSORIES
+
+| No. | Column Name    | Data Type    | Other Constraints                                      |
+| --- | -------------- | ------------ | ------------------------------------------------------ |
+| 1   | id             | CHAR(5)      | NOT NULL; Primary Key                                  |
+| 2   | name           | NVARCHAR(50) | NOT NULL                                               |
+| 3   | made_in        | NVARCHAR(20) |                                                        |
+| 4   | unit           | NVARCHAR(20) | NOT NULL                                               |
+| 5   | original_price | NUMERIC(8,0) | NOT NULL; Only accepts non-negative values (>= 0)      |
+| 6   | selling_price  | NUMERIC(8,0) | NOT NULL; Only accepts non-negative values (>= 0)      |
+| 7   | accessory_group_id   | CHAR(5)      | NOT NULL; Foreign Key referencing **`ACCESSORY_GROUPS(id)`** |
+
+### 5. SALES_INVOICES
+
+| No. | Column Name | Data Type | Other Constraints                               |
+| --- | ----------- | --------- | ----------------------------------------------- |
+| 1   | id          | CHAR(9)   | NOT NULL; Primary Key                           |
+| 2   | date        | DATE      | NOT NULL                                        |
+| 3   | customer_id | CHAR(9)   | NOT NULL; Foreign Key referencing **`CUSTOMERS(id)`** |
+| 4   | employee_id | CHAR(4)   | NOT NULL; Foreign Key referencing **`EMPLOYEES(id)`** |
+
+### 6. ACCESSORIES_IN_A_SALES_INVOICE
+
+| No. | Column Name      | Data Type | Other Constraints                                                 |
+| --- | ---------------- | --------- | ----------------------------------------------------------------- |
+| 1   | sales_invoice_id | CHAR(9)   | NOT NULL; Primary Key; Foreign Key referencing **`SALES_INVOICES(id)`** |
+| 2   | accessory_id     | CHAR(5)   | NOT NULL; Primary Key; Foreign Key referencing **`ACCESSORIES(id)`**    |
+| 3   | quantity         | INT       | NOT NULL; Only accepts non-negative values (>= 0)                 |
+
+### 7. EMPLOYEES
+
+| No. | Column Name  | Data Type    | Other Constraints                                 |
+| --- | ------------ | ------------ | ------------------------------------------------- |
+| 1   | id           | CHAR(4)      | NOT NULL; Primary Key                             |
+| 2   | last_name    | NVARCHAR(20) | NOT NULL                                          |
+| 3   | mid_name     | NVARCHAR(20) | NOT NULL                                          |
+| 4   | first_name   | NVARCHAR(20) | NOT NULL                                          |
+| 5   | position     | NVARCHAR(20) | NOT NULL                                          |
+| 6   | start_date   | DATE         | NOT NULL                                          |
+| 7   | salary       | NUMERIC(8,0) | NOT NULL; Only accepts non-negative values (>= 0) |
+| 8   | email        | NVARCHAR(50) |                                                   |
+| 9   | phone_number | CHAR(10)     |                                                   |
+| 10  | birthdate    | DATE         |                                                   |
+
+### 8. CUSTOMERS
+
+| No. | Column Name  | Data Type     | Other Constraints                                    |
+| --- | ------------ | ------------- | ---------------------------------------------------- |
+| 1   | id           | Char(9)       | NOT NULL; Primary Key                                |
+| 2   | first_name   | NVARCHAR(20)  |                                                      |
+| 3   | mid_name     | NVARCHAR(30)  | NOT NULL                                             |
+| 4   | last_name    | NVARCHAR(20)  | NOT NULL                                             |
+| 5   | address      | NVARCHAR(100) |                                                      |
+| 6   | phone_number | CHAR(10)      |                                                      |
+| 7   | gender       | NVARCHAR(3)   | NOT NULL; Only accepts values **Male** or **Female** |
+| 8   | birthdate    | DATE          |                                                      |
+
+### 9. ACCESSORY_GROUPS
+
+| No. | Column Name | Data Type    | Other Constraints     |
+| --- | ----------- | ------------ | --------------------- |
+| 1   | id          | CHAR(5)      | NOT NULL; Primary key |
+| 2   | name        | NVARCHAR(20) | NOT NULL              |
+| 3   | description | TEXT         | NOT NULL              |
+
+<br>
+
+## Data Input
+
+The data input for the project is stored as CSV files in [this directory](data). However, because of the requirements of the project, I have to write SQL statements to input the data table by table, line by line. The `insert_data.sql` file is [here](). The data input is fake and it is in Vietnamese. 
