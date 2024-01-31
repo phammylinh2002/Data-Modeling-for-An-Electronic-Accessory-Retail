@@ -228,10 +228,15 @@ After mapping the entity relationship model to the relational model, I structure
 
 <br>
 
-## Data Input
+## SQL Time!
+
+### Create Tables
+
+Before embarking on any data operations, the foundational step involves creating a robust database structure, starting with the creation of tables. The **`create_tables.sql`** file provided [here]() lays out the essential SQL commands required to define and establish the necessary tables within the database schema.
+
+### Data Input
 
 The data input for the project is stored as CSV files in [this directory](data). However, because of the requirements of the project, I have to write SQL statements to input the data table by table, line by line. The `insert_data.sql` file is [here](SQL/insert_data.sql). 
 
-**<p style="text-color:red">The data input is fake and it is in Vietnamese.</p>**
-
+<p style="color:red; font-weight: 700;">The data input is fake and it is in Vietnamese.</p>
 
