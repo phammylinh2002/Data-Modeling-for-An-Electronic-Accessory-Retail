@@ -240,10 +240,52 @@ Although the **`create_tables.sql`** file sets up the basic database structure, 
 
 ### 3. Data Input
 
-The data input for the project is stored as CSV files in [this directory](data). However, because of the requirements of the project, I have to write SQL statements to input the data table by table, line by line. The `insert_data.sql` file is [here](SQL/insert_data.sql). 
+The data input for the project is stored as CSV files in [this directory](data). However, because of the requirements of the project, I have to write SQL statements to input the data table by table, line by line. The `insert_data.sql` file is [here](SQL/insert_data.sql). The input order is correct. Data of a latter table should not be imported first as the error about constraints (especially foreign key constraints) will be raised. 
 
 <p style="color:red; font-weight: 700;">The data input is fake and it is in Vietnamese.</p>
 
 ### 4. Queries
 
+In fulfilling the project requirements, this section presents a series of SQL queries designed to extract meaningful insights and data from the established database structure. These queries are crafted to demonstrate various levels of complexity, ranging from simple conditions to compound queries involving multiple conditions and relations. Each query serves as a testament to the database's functionality and the proficiency in leveraging SQL to extract valuable information.
+
+All the queries lie in [this file](SQL/queries.sql). They better be executed one by one to view the result of each. Otherwise, the result set is of the last one.
+
+#### Query 1
+
+**Requirement:** Retrieve the code number and name of sales employees, along with the number of invoices each person has executed.
+**Result:**
+[Query 1 result]()
+<p align="center"><i>Query 1 result - Source: Linh Pham My</i></p>
+
+#### Query 2
+
+**Requirement:**
+**Result:**
+[Query 2 result]()
+<p align="center"><i>Query 2 result - Source: Linh Pham My</i></p>
+
+#### Query 3
+
+**Requirement:**
+**Result:**
+[Query 3 result]()
+<p align="center"><i>Query 3 result - Source: Linh Pham My</i></p>
+
+#### Query 4
+
+**Requirement:**
+**Result:**
+[Query 4 result]()
+<p align="center"><i>Query 4 result - Source: Linh Pham My</i></p>
+
+#### Query 5
+
+**Requirement:**
+**Result:**
+[Query 5 result]()
+<p align="center"><i>Query 5 result - Source: Linh Pham My</i></p>
+
+<br>
+
+## Conclusion
 
