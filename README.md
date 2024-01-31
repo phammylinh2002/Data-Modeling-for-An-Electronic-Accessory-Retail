@@ -25,8 +25,9 @@ Additionally, to create customer loyalty programs and manage customer relations,
 After analyzing the requirements, an ERD was designed to visually represent the database structure, facilitating efficient management of the electronic accessory store's business data.
 
 ![ERD](figures/ERD.png)
+<p align="center"><i>Entity Relationship Diagram - Source: Linh Pham My</i></p>
 
-### Entities
+### Entity Types
 
 Here is a breakdown of the entities and their corresponding attributes represented in the ERD:
 
@@ -109,4 +110,6 @@ In addition to the attributes of each individual entity, relationships between e
 
 After designing the ERD, I meticulously mapped the entities and their attributes into its relational model. The relational model diagram below provides a concise overview of the database structure, illustrating the relationships between tables through references, particularly via foreign keys. 
 
-![Relational Model](figures/relational_model.png)
+![Relational Model](figures/relational_diagram.png)
+<p align="center"><i>Relational Model Diagram - Source: Linh Pham My</i></p>
+
