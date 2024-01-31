@@ -26,6 +26,8 @@ After analyzing the requirements, an ERD was designed to visually represent the 
 
 ![ERD](figures/ERD.png)
 
+### Entities
+
 Here is a breakdown of the entities and their corresponding attributes represented in the ERD:
 
 1. **EMPLOYEES**:  This entity represents all employees working at the retail store.
@@ -62,13 +64,13 @@ Here is a breakdown of the entities and their corresponding attributes represent
    - **`selling_price`**: The selling price of the accessory.
 <br>
 
-4. **ACCESSORY_GROUP**: This entity groups multiple accessories together so they can be managed easily.
+4. **ACCESSORY_GROUPS**: This entity groups multiple accessories together so they can be managed easily.
     - **`id`**: A unique identifier for each group.
     - **`name`**: The name of the group.
     - **`description`**: Description about what the group contains.
 <br>
 
-5. **SALE_INVOICES**: Represents a sale transaction between employees and customers, containing details such as which products were sold,
+5. **SALES_INVOICES**: Represents a sale transaction between employees and customers, containing details such as which products were sold,
     - **`id`**: A unique identifier for the order.
     - **`date`**:The date when the order was placed.
 
@@ -83,3 +85,11 @@ Here is a breakdown of the entities and their corresponding attributes represent
     - **`id`**: A unique identifier for each invoice.
     - **`date`**: The date when the invoice was issued.
 
+### Relationships
+
+In addition to the attributes of each individual entity, relationships between entities may possess their own set of attributes, contributing to a more nuanced understanding of the interconnected data within the system.
+
+- **EMPLOYEES** and **SALES_INVOICES**: The relationship between employees and sales invoices is one-to-many, indicating that each employee can be associated with multiple sales invoices, while each sales invoice is tied to a single employee.
+- **CUSTOMERS** and **SALES_INVOICES**: The relationship between customers and sales invoices is one-to-many, signifying that each customer can have multiple sales invoices, while each sales invoice is linked to a single customer.
+- **ACCESSORIES** and **SALES_INVOICES**: The relationship between accessories and sales invoices is many-to-many, demonstrating that each sales invoice can contain multiple accessories, and each accessory can be present in multiple sales invoices.
+- **ACCESSORIES** and **ACCESSORY_GROUPS**: 
