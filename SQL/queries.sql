@@ -1,15 +1,16 @@
 -- Query 1
 SELECT 
-	NV.MaNV, 
-	Ten, 
-	COUNT(*) AS SoHDX
+	E.id, 
+	name, 
+	COUNT(*) AS no_of_sales_invoices
 FROM 
-	NHAN_VIEN AS NV, 
-	HOA_DON_XUAT AS HDX
+	NHAN_VIEN AS E, 
+	SALES_INVOICES AS S
 WHERE 
-	NV.MaNV = HDX.MaNV 
-	AND Chucvu = 'Sales'
-GROUP BY NV.MaNV, Ten;
+	E.id = S.id 
+	AND position = 'Sales'
+GROUP BY E.id, name;
+GO
 
 -- Query 2
 SELECT 
@@ -21,6 +22,7 @@ FROM
 WHERE 
 	NLK.MaNLK = LK.MaNLK 
 	AND NLK.MaNLK = 'NLK01';
+	GO
 
 -- Query 3
 SELECT 
@@ -37,6 +39,7 @@ WHERE
     AND Soluongnhap >= 500
     AND Ngaynhap BETWEEN '2022-01-01' AND '2022-06-30'
 ORDER BY Soluongnhap DESC, Ten;
+GO
 
 -- Query 4
 SELECT 
@@ -57,6 +60,7 @@ WHERE
 	AND Ngaysinh >= '2000-01-01'
 GROUP BY KH.MaKH, KH.Ten, LK.Ten
 ORDER BY TenKH, TongSLX DESC;
+GO
 
 -- Query 5
 SELECT 
@@ -76,3 +80,4 @@ WHERE
 	AND Diachi LIKE '%TP. HCM%'
 GROUP BY CONCAT(Ho, ' ',Tenlot, ' ', KH.Ten) 
 ORDER BY SoTienKHChi DESC;
+GO
