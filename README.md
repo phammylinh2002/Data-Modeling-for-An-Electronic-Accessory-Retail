@@ -230,4 +230,8 @@ After mapping the entity relationship model to the relational model, I structure
 
 ## Data Input
 
-The data input for the project is stored as CSV files in [this directory](data). However, because of the requirements of the project, I have to write SQL statements to input the data table by table, line by line. The `insert_data.sql` file is [here](). The data input is fake and it is in Vietnamese. 
+The data input for the project is stored as CSV files in [this directory](data). However, because of the requirements of the project, I have to write SQL statements to input the data table by table, line by line. The `insert_data.sql` file is [here](SQL/insert_data.sql). 
+
+**<p style="text-color:red">The data input is fake and it is in Vietnamese.</p>**
+
+
