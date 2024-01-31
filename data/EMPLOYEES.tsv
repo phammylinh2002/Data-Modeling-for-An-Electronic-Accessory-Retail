@@ -1,0 +1,11 @@
+id	first_name	mid_name	last_name	position	start_date	salary	email	phone_number	birthdate
+NV01	Nguyễn	Thảo	Linh	Sales	2022-12-08	66000000	linh.nguyen@gmail.com	0941237585	1994-12-01
+NV02	Nguyễn	Ngọc	Thảo	Sales	2022-08-12	8000000	thao.thaonguyen@gmail.com	0966372385	1996-08-12
+NV03	Nguyễn	Duy	Khang	Kế toán	2022-10-04	15000000	khang.nguyen@gmail.com	0365722364	1991-11-04
+NV04	Phạm	Bảo	Yến	Kế toán	2022-05-12	19000000	yen.pham@gmail.com	0374799681	1993-05-12
+NV05	Trần	Ngọc	Nhi	Quản lý cửa hàng	2022-02-10	15000000	nhi.tran@gmail.com	0919723524	1995-04-16
+NV06	Võ	Minh	Tâm	Trưởng nhóm Sales	2022-11-10	15000000	tam.vo@gmail.com	0937057757	1992-09-03
+NV07	Trương	Thanh	Nghi	Thu ngân	2022-10-04	9000000	nghi.trương@gmail.com	0838428972	2001-09-03
+NV08	Phạm	Ngọc	Yến	Thu ngân	2022-03-06	9000000	yen.pham@gmail.com	0966604027	1999-07-12
+NV09	Trần	Duy	Phú	Sales	2022-10-07	5000000	phu.tran@gmail.com	0937017035	2002-02-03
+NV10	Lê	Phi	Long	Sales	2022-04-13	5000000	long.le@gmail.com	0356853029	2001-08-12

@@ -1,0 +1,4 @@
+id	name	description
+NLK01	Linh kiện điện cơ	Có khả năng tác động điện liên kết với phần cơ, là các thiết bị như: Phần tử gốm áp điện, đầu nối, công tắc (chuyển mạch), cầu chì.
+NLK02	Linh kiện bị động	Không có khả năng cấp nguồn vào mạch, có quan hệ tuyến tính với dòng điện, điện áp, tần số… Gồm có các loại chính như: Điện trở, tụ điện, cảm ứng từ điện, memristor, networks, Transducer, Antenna.
+NLK03	Linh kiện chủ động	Là loại có khả năng tác động lên nguồn nuôi AC/DC để tạo ra nguồn tín hiệu mới. Trong nhóm này gồm có: linh kiện bán dẫn (Diode, transistor, tạch tích hợp ), quang điện tử, đền điện tử chân không, nguồn điện.
