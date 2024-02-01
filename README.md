@@ -252,40 +252,48 @@ All the queries lie in [this file](SQL/queries.sql). They better be executed one
 
 #### Query 1
 
-**Requirement:** Retrieve the code number and name of sales employees, along with the number of invoices each person has executed.
+**Requirement:** Retrieve the ID and last name of sales employees, along with the number of invoices each person created.
+
 **Result:**
-[Query 1 result](figures/query_1.png)
+![Query 1 result](figures/query_1.png)
 <p align="center"><i>Query 1 result - Source: Linh Pham My</i></p>
 
 #### Query 2
 
-**Requirement:**
+**Requirement:** Retrieve the name of the accessory group whose ID is NLK01 and the names of the accessories belonging to the group.
+
 **Result:**
-[Query 2 result](figures/query_2.png)
+![Query 2 result](figures/query_2.png)
 <p align="center"><i>Query 2 result - Source: Linh Pham My</i></p>
 
 #### Query 3
 
-**Requirement:**
+**Requirement:** Retrieve the import invoice IDs, accessory names, and quantity of each accessory imported within invoices having each accessory's quantity per invoice equal to or greater than 500 and import dates between January 1, 2022, and June 30, 2022. The results are sorted by quantity imported in descending order and component names in alphabetical order.
+
 **Result:**
-[Query 3 result](figures/query_3.png)
+![Query 3 result](figures/query_3.png)
 <p align="center"><i>Query 3 result - Source: Linh Pham My</i></p>
+
+> The column name which is partially obsured is **quantity**.
 
 #### Query 4
 
-**Requirement:**
+**Requirement:** Retrieve the ID and name of customers, accessory names, and the total quantity of each accessory purchased by customers who are male and born from the year 2000 onwards. Sort the results alphabetically by customer name and the total quantity of components purchased from highest to lowest.
+
 **Result:**
-[Query 4 result](figures/query_4.png)
+![Query 4 result](figures/query_4.png)
 <p align="center"><i>Query 4 result - Source: Linh Pham My</i></p>
 
 #### Query 5
 
-**Requirement:**
+**Requirement:** Retrive the full name of customers (merged into one column) and the amount spent by each one from 01/07/2022 until the present. Note: Only consider customers in Ho Chi Minh City and return the top 3 customers who spent the most.
+
 **Result:**
-[Query 5 result](figures/query_5.png)
+![Query 5 result](figures/query_5.png)
 <p align="center"><i>Query 5 result - Source: Linh Pham My</i></p>
 
 <br>
 
 ## Conclusion
 
+### 
