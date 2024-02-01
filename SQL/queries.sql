@@ -4,10 +4,10 @@ SELECT
 	name, 
 	COUNT(*) AS no_of_sales_invoices
 FROM 
-	NHAN_VIEN AS E, 
+	EMPLOYEES AS E, 
 	SALES_INVOICES AS S
 WHERE 
-	E.id = S.id 
+	E.id = S.employee_id 
 	AND position = 'Sales'
 GROUP BY E.id, name;
 GO
@@ -20,7 +20,7 @@ FROM
 	ACCESSORY_GROUPS AS G, 
 	ACCESSORIES AS A 
 WHERE 
-	id = accessory_group_id 
+	G.id = accessory_group_id 
 	AND G.id = 'NLK01';
 GO
 
