@@ -248,7 +248,7 @@ The data input for the project is stored as TSV files in [this directory](data).
 
 In fulfilling the project requirements, this section presents a series of SQL queries designed to extract meaningful insights and data from the established database structure. These queries are crafted to demonstrate various levels of complexity, ranging from simple conditions to compound queries involving multiple conditions and relations. Each query serves as a testament to the database's functionality and the proficiency in leveraging SQL to extract valuable information.
 
-All the queries lie in [this file](SQL/queries.sql). They better be executed one by one to view the result of each. Otherwise, the result set is of the last one.
+All the queries lie in [this file](SQL/queries.sql). They all are my own ideas.
 
 #### Query 1
 
@@ -301,4 +301,14 @@ All the queries lie in [this file](SQL/queries.sql). They better be executed one
 
 ## Conclusion
 
-### 
+To be honest, I didn't gain much from this project since I already had a good grasp of SQL by the time I started it. The queries I tackled here were less complex compared to ones I'd previously solved. As expected, I received an A grade for this project, which was no surprise.
+
+However, despite not learning a lot directly from this project, there are a few valuable takeaways I cherish.
+
+- Firstly, **I finally grasped the concept of entities**. It's a term I'd heard before but never really understood, especially since it's not commonly used in my culture. Through research and the guidance of my teacher during this course, I finally got a clear understanding. Speaking of which, my teacher is amazing - she's my favorite, and we still maintain a great relationship.
+
+- Secondly, **I learned how to model data and design a relational database**, skills that were surprisingly absent from the SQL courses I'd taken on DataCamp. It's clear to me now how crucial these skills are in the tech industry.
+
+- Lastly, this project showed me that **I'm not as weak as I once thought**. Coming from a marketing background, I initially felt like I was starting late in the tech field and should take it slow. But now, having completed this project and seeing my performance, I realize I'm actually excelling - I'm among the top students in my major at my university.
+
+Overall, this project has provided me with a solid foundation. I believe every tech student should undertake a project like this - it's a fundamental part of tech education for a reason. So, my advice? Don't skip it or just aim to pass - embrace it and learn as much as you can from it.
